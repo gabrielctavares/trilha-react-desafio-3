@@ -27,8 +27,7 @@ const Register = () => {
         try{
             const {data} = await api.postForm(`/users`, formData);
             
-            console.log(data)
-            if(data.length && data[0].id){
+            if(data && data.id){
                 navigate('/feed') 
                 return
             }
